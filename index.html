@@ -1,40 +1,256 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - Vinicius Morais</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio - Vinicius Morais</title>
+
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Trebuchet MS", sans-serif;
+      background-color: #090909;
+      color: #ecebe7;
+      overflow-x: hidden;
+    }
+
+    /* CABEÇALHO FIXO */
+    header {
+      position: fixed;
+      top: -100px;
+      left: 0;
+      width: 100%;
+      background: rgba(9, 9, 9, 0.95);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      transition: top 0.8s ease;
+      z-index: 1000;
+    }
+
+    /*VMO*/
+    .logo {
+      color: #ecebe7;
+      font-weight: bold;
+      font-size: 1.4rem;
+      text-decoration: none;
+      letter-spacing: 1px;
+      transition: transform 0.2s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.15);
+      color: #ffffff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: #ecebe7;
+      font-weight: bold;
+      font-size: 1rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      transform: scale(1);
+      color: #ffffff;
+    }
+
+    /* INTRO */
+    .intro {
+      position: fixed;
+      inset: 0;
+      background-color: #090909;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      animation: pulse 4s infinite alternate;
+      text-align: center;
+    }
+
+    .intro h1,
+    .intro h2 {
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .portfolio {
+      font-family: "Courier New", Courier, monospace;
+      font-size: 1.5rem;
+      animation-delay: 0.5s;
+      font-weight: 400;
+      bottom: 5100px;
+    }
+
+    .vinicius {
+      font-family: 'Trebuchet MS', sans-serif;
+      font-size: 8rem;
+      font-weight: 700;
+      animation-delay: 1s;
+      letter-spacing: 8px;
+    }
+
+    .morais {
+      font-family: "Courier New", Courier, monospace;
+      font-size: 2rem;
+      font-weight: 400;
+      letter-spacing: 80px;
+      position: relative;
+      left: 43px;
+      right: 50px;
+      top: -27px;
+      animation-delay: 1.8s;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* A 'HERO SECTION' */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #090909;
+      color: #ecebe7;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 5rem;
+      letter-spacing: 5px;
+      position: relative;
+      top: -157px;
+
+    }
+
+    .hero h2 {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 150rem;
+      font-weight: 500;
+      color: #ecebe7;
+      position: relative;
+      top: -170px;
+      left: 27px;
+      letter-spacing: 50px;
+      font-size: large;
+
+    }
+
+    section {
+      padding: 100px 20px;
+      min-height: 100vh;
+      background-color: #ecebe7;
+      color: #090909;
+    }
+
+    footer {
+      background: #090909;
+      color: #ecebe7;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <a href="#inicio" class="logo">VMO</a>
-        <nav>
-            <ul>
-                <li><a href="#sobre">sobre mim</a></li>
-                <li><a href="#projetos">projetos</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="inicio" class="hero">
-        <h1>VINICIUS</h1>
-        <h2>Morais Albino Tomaz</h2>
-    </section>
+  <!-- INTRO DNV -->
+  <div class="intro" id="intro">
+    <h2 class="portfolio">PORTFÓLIO</h2>
+    <h1 class="vinicius">VINICIUS</h1>
+    <h2 class="morais">Morais</h2>
+  </div>
 
-    <section id="sobre">
-        <h2>Sobre mim</h2>
-        <p>Texto sobre mim...(em desenvolvimento)</p>
-    </section>
+  <!--NAV DO CABEÇALHO-->
+  <header id="header">
+    <a href="#inicio" class="logo">VMO</a>
+    <nav>
+      <ul>
+        <li><a href="#sobre">sobre mim</a></li>
+        <li><a href="#projetos">projetos</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section id="projetos">
-        <h2>Projetos</h2>
-        <p> StartSprint - CTRLSEIS</p>
-        <p> (em desenvolvimento)</p>
-    </section>
+  <!--TITULO NOME-->
+  <section id="inicio" class="hero">
+    <h1 class="titulo">VINICIUS</h1>
+    <h2 class="subtitulo">Morais</h2>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Vinicius Morais</p>
-    </footer>
+  <section id="sobre">
+    <h2>Sobre mim</h2>
+    <p>Texto sobre mim...(em desenvolvimento)</p>
+  </section>
+
+  <section id="projetos">
+    <h2>Projetos</h2>
+    <p>StartSprint - CTRLSEIS</p>
+    <p>(em desenvolvimento)</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Vinicius Morais</p>
+  </footer>
+
+  <script>
+    // Animação da intro
+    window.addEventListener("load", () => {
+      const intro = document.getElementById("intro");
+      const header = document.getElementById("header");
+
+      setTimeout(() => {
+        intro.style.transition = "all 1.5s ease";
+        intro.style.opacity = "0";
+        intro.style.transform = "translateY(-100%)";
+      }, 2500);
+
+      setTimeout(() => {
+        intro.style.display = "none";
+        header.style.top = "0";
+      }, 4000);
+    });
+
+    // ANIMAÇÃO DE MOVIMENTO
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
 </body>
+
 </html>
