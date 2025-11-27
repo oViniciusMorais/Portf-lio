@@ -21,7 +21,7 @@
       overflow-x: hidden;
     }
 
-    /* CABEÇALHO FIXO */
+    /* CABEÇALHO */
     header {
       position: fixed;
       top: -100px;
@@ -36,19 +36,17 @@
       z-index: 1000;
     }
 
-    /*VMO*/
     .logo {
       color: #ecebe7;
       font-weight: bold;
       font-size: 1.4rem;
       text-decoration: none;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
       transition: transform 0.2s ease;
     }
 
     .logo:hover {
       transform: scale(1.15);
-      color: #ffffff;
     }
 
     nav ul {
@@ -59,19 +57,16 @@
 
     nav a {
       color: #ecebe7;
-      font-weight: bold;
-      font-size: 1rem;
       text-decoration: none;
       font-weight: 500;
       transition: color 0.2s ease;
     }
 
     nav a:hover {
-      transform: scale(1);
       color: #ffffff;
     }
 
-    /* INTRO */
+    /* INTRO ANIMADA */
     .intro {
       position: fixed;
       inset: 0;
@@ -103,6 +98,7 @@
       font-family: 'Trebuchet MS', sans-serif;
       font-size: 8rem;
       font-weight: 700;
+      /* só esse em negrito */
       animation-delay: 1s;
       letter-spacing: 8px;
     }
@@ -115,7 +111,7 @@
       position: relative;
       left: 43px;
       right: 50px;
-      top: -27px;
+      top: -20px;
       animation-delay: 1.8s;
     }
 
@@ -131,7 +127,8 @@
       }
     }
 
-    /* A 'HERO SECTION' */
+
+    /* HERO SECTION */
     .hero {
       height: 100vh;
       display: flex;
@@ -144,24 +141,13 @@
     }
 
     .hero h1 {
-      font-size: 5rem;
-      letter-spacing: 5px;
-      position: relative;
-      top: -157px;
-
+      font-size: 4rem;
+      letter-spacing: 4px;
     }
 
     .hero h2 {
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 150rem;
-      font-weight: 500;
+      font-size: 1.5rem;
       color: #ecebe7;
-      position: relative;
-      top: -170px;
-      left: 27px;
-      letter-spacing: 50px;
-      font-size: large;
-
     }
 
     section {
@@ -182,14 +168,14 @@
 
 <body>
 
-  <!-- INTRO DNV -->
+  <!-- INTRO ANIMADA -->
   <div class="intro" id="intro">
     <h2 class="portfolio">PORTFÓLIO</h2>
     <h1 class="vinicius">VINICIUS</h1>
     <h2 class="morais">Morais</h2>
   </div>
 
-  <!--NAV DO CABEÇALHO-->
+
   <header id="header">
     <a href="#inicio" class="logo">VMO</a>
     <nav>
@@ -200,57 +186,120 @@
     </nav>
   </header>
 
-  <!--TITULO NOME-->
   <section id="inicio" class="hero">
-    <h1 class="titulo">VINICIUS</h1>
-    <h2 class="subtitulo">Morais</h2>
+    <h1 style="position: relative; top: -250px;">VINICIUS</h1>
+    <h1 style="position: relative; top: -250px; left: 17px; font-size: larger; letter-spacing: 35px;">Morais</h2>
   </section>
 
-  <section id="sobre">
-    <h2>Sobre mim</h2>
-    <p>Texto sobre mim...(em desenvolvimento)</p>
-  </section>
+<section id="sobre" 
+  style="padding: 80px 20px; background-color: #ecebe7; color: #090909; display: flex; justify-content: center;">
+  
+  <div
+    style="max-width: 800px; background: #ecebe7; padding: 40px; border-radius: 20px; box-shadow: 0 0 25px rgba(0,0,0,0.15); line-height: 1.7;">
 
-  <section id="projetos">
-    <h2>Projetos</h2>
-    <p>StartSprint - CTRLSEIS</p>
-    <p>(em desenvolvimento)</p>
-  </section>
+    <h2 style="font-size: 2.2rem; margin-bottom: 20px; text-align: center;">Sobre mim</h2>
 
-  <footer>
-    <p>&copy; 2025 Vinicius Morais</p>
-  </footer>
+    <p>
+      Meu nome é Vinicius Morais Albino Tomaz, tenho 18 anos e atualmente curso
+      Análise e Desenvolvimento de Sistemas na FATEC São José dos Campos –
+      Prof. Jessen Vidal. Estou no começo da minha trajetória na tecnologia e venho
+      evoluindo constantemente, sempre buscando entender melhor como as coisas
+      funcionam por trás das telas.
+    </p>
 
-  <script>
-    // Animação da intro
-    window.addEventListener("load", () => {
-      const intro = document.getElementById("intro");
-      const header = document.getElementById("header");
+    <br>
 
-      setTimeout(() => {
-        intro.style.transition = "all 1.5s ease";
-        intro.style.opacity = "0";
-        intro.style.transform = "translateY(-100%)";
-      }, 2500);
+    <p>
+      Sou apaixonado por desenvolvimento Front-End. Gosto de transformar ideias em
+      interfaces limpas, intuitivas e agradáveis, criando experiências que realmente
+      façam sentido para o usuário. Apesar do foco no Front-End, também venho
+      explorando o universo Full Stack — acredito que entender todo o ciclo de
+      desenvolvimento me torna mais preparado e completo para os desafios do mercado.
+    </p>
 
-      setTimeout(() => {
-        intro.style.display = "none";
-        header.style.top = "0";
-      }, 4000);
-    });
+    <br>
 
-    // ANIMAÇÃO DE MOVIMENTO
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-          observer.unobserve(entry.target);
-        }
+    <p>
+      Estou sempre aberto a aprender coisas novas, participar de projetos
+      interessantes e trocar experiências com pessoas que compartilham da mesma
+      paixão pela tecnologia.
+    </p>
+
+    <br><br>
+
+
+    
+    <section id="curriculo">
+      <h2 style="font-size: 2.2rem; margin-bottom: 25px; text-align: center;">Currículo / Skills</h2>
+
+      <h3 style="margin-bottom: 10px;">Experiência</h3>
+      <p>
+        • <strong>EATON</strong> (2022–2023) — Menor Aprendiz  
+        Experiência prática em ambiente corporativo, rotina profissional e suporte às áreas internas.
+      </p>
+
+      <br>
+
+      <h3 style="margin-bottom: 10px;">Skills</h3>
+      <p>
+        • Python<br>
+        • HTML<br>
+        • CSS<br>
+        • AWS<br>
+        • Git<br>
+        • Flask
+      </p>
+    </section>
+
+  </div>
+</section>
+
+
+
+
+<section id="projetos"
+  style="padding: 80px 20px; background-color: #ecebe7; color: #090909; display: flex; justify-content: center;">
+  
+  <div
+    style="max-width: 800px; background: #ecebe7; padding: 40px; border-radius: 20px; box-shadow: 0 0 25px rgba(0,0,0,0.15); line-height: 1.7;">
+
+    <h2 style="font-size: 2.2rem; margin-bottom: 25px; text-align: center;">Projetos</h2>
+
+    <h3>StartSprint — CTRLSEIS (FATEC)</h3>
+    <p>
+      Projeto acadêmico focado em desenvolver soluções práticas e eficientes, integrando tecnologia, usabilidade e
+      colaboração em equipe.
+    </p>
+    <p><em>(em desenvolvimento)</em></p>
+
+  </div>
+
+</section>
+
+
+    <footer>
+      <p>&copy; 2025 Vinicius Morais</p>
+    </footer>
+
+    <script>
+      // Animação da intro :)
+      window.addEventListener("load", () => {
+        const intro = document.getElementById("intro");
+        const header = document.getElementById("header");
+
+        setTimeout(() => {
+          intro.style.transition = "all 1.5s ease";
+          intro.style.opacity = "0";
+          intro.style.transform = "translateY(-100%)";
+        }, 2500);
+
+        setTimeout(() => {
+          intro.style.display = "none";
+          header.style.top = "0";
+        }, 4000);
       });
-    }, { threshold: 0.1 });
+    </script>
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  </script>
 </body>
 
 </html>
